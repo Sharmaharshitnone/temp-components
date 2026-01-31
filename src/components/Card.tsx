@@ -17,7 +17,7 @@ export const Card: React.FC<CardProps> = ({ title, children, footer }) => {
 
   const titleStyles = {
     fontSize: '18px',
-    fontWeight: 600,
+    fontWeight: '600',
     marginBottom: '12px',
     color: '#333',
   };

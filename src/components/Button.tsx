@@ -19,7 +19,7 @@ export const Button: React.FC<ButtonProps> = ({
     borderRadius: '4px',
     cursor: disabled ? 'not-allowed' : 'pointer',
     fontSize: '14px',
-    fontWeight: 500,
+    fontWeight: '500',
     opacity: disabled ? 0.6 : 1,
   };
 
