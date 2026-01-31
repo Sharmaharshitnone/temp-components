@@ -1,0 +1,134 @@
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Global Navigation Bar Styles */
+.global-nav-bar {
+  /* Layout */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  
+  /* Flexbox alignment */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  box-sizing: border-box;
+  
+  /* Background: Translucent Black with backdrop blur */
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  
+  /* Border */
+  border-bottom: 1px solid #333;
+  
+  /* Z-index to stay on top */
+  z-index: 1000;
+  
+  /* Font family */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Logo Styles */
+.global-nav-bar__logo {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+/* Center Links Container */
+.global-nav-bar__links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+  /* Center positioning */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Link Item */
+.global-nav-bar__link-item {
+  margin: 0;
+  padding: 0;
+}
+
+/* Link Styles */
+.global-nav-bar__link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #888888;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.global-nav-bar__link:hover {
+  color: #ffffff;
+}
+
+/* Feedback Button Styles */
+.global-nav-bar__feedback-btn {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.global-nav-bar__feedback-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #666;
+}
+
+.global-nav-bar__feedback-btn:focus {
+  outline: 2px solid #888;
+  outline-offset: 2px;
+  border-color: #888;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .global-nav-bar {
+    padding: 0 16px;
+  }
+  
+  .global-nav-bar__links {
+    gap: 20px;
+  }
+  
+  .global-nav-bar__link {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .global-nav-bar__links {
+    position: static;
+    transform: none;
+    gap: 12px;
+  }
+  
+  .global-nav-bar__logo {
+    font-size: 16px;
+  }
+  
+  .global-nav-bar__feedback-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
