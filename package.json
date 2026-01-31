@@ -1,0 +1,28 @@
+{
+  "name": "temp-components",
+  "version": "1.0.0",
+  "description": "React component library - Global Navigation Bar and more",
+  "main": "src/components/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "navigation",
+    "navbar"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.2",
+    "vite": "^7.3.1"
+  }
+}
