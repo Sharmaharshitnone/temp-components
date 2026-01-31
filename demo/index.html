@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Navigation Bar - Demo</title>
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      min-height: 100vh;
+    }
+
+    /* Global Navigation Bar Styles */
+    .global-nav {
+      width: 100%;
+      height: 64px;
+      background-color: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid #333;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .nav-logo {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+      flex: 0 0 auto;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .nav-link {
+      font-size: 14px;
+      font-weight: 400;
+      color: #888888;
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.2s ease;
+      background: none;
+      border: none;
+      padding: 0;
+      font-family: inherit;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #ffffff;
+    }
+
+    .nav-feedback {
+      font-size: 14px;
+      font-weight: 500;
+      color: #ffffff;
+      background-color: transparent;
+      border: 1px solid #444;
+      border-radius: 6px;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+      flex: 0 0 auto;
+    }
+
+    .nav-feedback:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: #666;
+    }
+
+    /* Demo content */
+    .demo-content {
+      padding-top: 120px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    .demo-section {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .demo-title {
+      color: #ffffff;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .demo-description {
+      color: #888888;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .feature-list {
+      list-style: none;
+    }
+
+    .feature-item {
+      color: #cccccc;
+      font-size: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid #333;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .feature-item::before {
+      content: '✓';
+      color: #4ade80;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <!-- Global Navigation Bar -->
+  <nav class="global-nav" role="navigation" aria-label="Global navigation">
+    <div class="nav-logo">SYSTEM</div>
+    <div class="nav-links">
+      <button class="nav-link active">Overview</button>
+      <button class="nav-link">Deployments</button>
+      <button class="nav-link">Analytics</button>
+    </div>
+    <button class="nav-feedback">Feedback</button>
+  </nav>
+
+  <!-- Demo Content -->
+  <div class="demo-content">
+    <div class="demo-section">
+      <h1 class="demo-title">Global Navigation Bar</h1>
+      <p class="demo-description">
+        A minimalist, airy navigation component designed for modern web applications. 
+        The navigation bar features a translucent black background with a subtle backdrop blur 
+        effect, creating a sophisticated glass-like appearance.
+      </p>
+      <ul class="feature-list">
+        <li class="feature-item">Full width with fixed height (64px)</li>
+        <li class="feature-item">Translucent black background (#000000) with 80% opacity</li>
+        <li class="feature-item">Backdrop blur effect (12px)</li>
+        <li class="feature-item">Border-bottom: 1px solid #333</li>
+        <li class="feature-item">Logo 'SYSTEM' on left using Inter Bold font</li>
+        <li class="feature-item">Centered navigation links in gray text</li>
+        <li class="feature-item">'Feedback' button on right side</li>
+        <li class="feature-item">Hover states for interactive elements</li>
+        <li class="feature-item">Accessible with proper ARIA attributes</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // Add hover functionality for nav links
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function() {
+        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+
+    // Feedback button click handler
+    document.querySelector('.nav-feedback').addEventListener('click', function() {
+      alert('Feedback button clicked!');
+    });
+  </script>
+</body>
+</html>
