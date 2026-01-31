@@ -1,0 +1,51 @@
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  padding-top: 80px; /* Account for fixed nav height (64px) + some spacing */
+  padding-left: 24px;
+  padding-right: 24px;
+  text-align: center;
+}
+
+.main-content h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.main-content p {
+  font-family: 'Inter', sans-serif;
+  color: #888;
+}
+
+.demo-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+  padding: 100px 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.demo-section {
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid #333;
+}
+
+.demo-section h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.demo-section p {
+  font-family: 'Inter', sans-serif;
+  color: #666;
+}

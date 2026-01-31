@@ -1,0 +1,85 @@
+/* GlobalNavigationBar Styles */
+
+.global-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 64px;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #333;
+  z-index: 1000;
+}
+
+.global-nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 100%;
+  padding: 0 24px;
+}
+
+/* Logo styles */
+.global-nav-logo {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+/* Navigation links */
+.global-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.global-nav-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #888888;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.global-nav-link:hover {
+  color: #ffffff;
+}
+
+/* Feedback button */
+.global-nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.global-nav-feedback-btn {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.global-nav-feedback-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #666;
+}
+
+.global-nav-feedback-btn:focus {
+  outline: 2px solid #888;
+  outline-offset: 2px;
+}
